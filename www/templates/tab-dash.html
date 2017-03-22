@@ -1,0 +1,18 @@
+<ion-view view-title="Status">
+    <ion-content class="padding">
+
+        <h4>
+            You are <label class="calm padding-left" style="font-size: 12pt;">{{choice}}</label>
+        </h4>
+        <div class="seperator" style="width: 300px; height:30px;"></div>
+        <ion-list>
+            <div class="item item-divider">
+                <h5>Please Choose your Status</h5>
+            </div>
+            <ion-radio ng-model="choice" ng-change="report(choice)" ng-value="'Available'">Available</ion-radio>
+            <ion-radio ng-model="choice" ng-change="report(choice)" ng-value="'Busy'">Busy</ion-radio>
+            <ion-radio ng-model="choice" ng-change="report(choice)" ng-value="'Off-Duty'">Off-Duty</ion-radio>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

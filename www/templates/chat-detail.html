@@ -1,0 +1,55 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+  <div class="seperator" style="width: 300px; height: 120px;"></div>
+    <p>
+      Bookings: 
+      <ul>
+        <li ng-repeat="booking in bookings">
+          {{booking.ID}}
+          {{booking.sourceLat}}
+          {{booking.sourceLng}}
+          {{booking.destinationLat}}
+          {{booking.destinationLng}}
+          <a ng-click="deleteBooking($bookingID)">Delete booking</a>      
+        </li>
+      </ul>
+
+      <a href="" ng-click="toggle = !toggle">Toggle nav</a>
+      <ul ng-show="toggle">
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+
+         <p>Test 1: {{ expression.empty.length > 0 && 'My data' || 'No data' }}</p>
+        <p>Test 2: {{ expression.full.length > 0 && 'My data' || 'No data' }}</p>
+      
+      
+   
+    </p>
+    <br>
+    {{result}}
+    <br>
+    <br>
+    <p>No filter: {{ greeting }} </p>
+    <p>Reversed: {{ greeting | reverse }}</p>
+    <br>
+
+    <a custom-button>Click me</a>
+
+  <p>Type a few numbers below to watch the filter</p>
+  <input type="text" ng-model="lowerBound" />
+  <ul>
+    <li ng-repeat="number in numbers | filter:greaterThanNum">
+      {{ number }}
+    </li>
+  </ul>
+
+  <br>
+  <input type="text" ng-model="myModel" placeholder="Start typing yaad...." />
+  <p>My Model Yaad: {{myModel}}</p>
+
